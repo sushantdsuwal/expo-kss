@@ -6,17 +6,20 @@
     "development": {
       "developmentClient": true,
       "distribution": "internal",
+      "channel": "development",
       "env": {
         "EXPO_PUBLIC_EXCHANGE_RATE_API_KEY": "QowpGeAE4Tm8Vdh6yGaaBxevZYkUUJGC"
       }
     },
     "preview": {
       "distribution": "internal",
+      "channel": "preview",
       "env": {
         "EXPO_PUBLIC_EXCHANGE_RATE_API_KEY": "QowpGeAE4Tm8Vdh6yGaaBxevZYkUUJGC"
       }
     },
     "production": {
+      "channel": "production",
       "env": {
         "EXPO_PUBLIC_EXCHANGE_RATE_API_KEY": "QowpGeAE4Tm8Vdh6yGaaBxevZYkUUJGC"
       }
