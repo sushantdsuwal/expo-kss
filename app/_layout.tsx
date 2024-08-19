@@ -6,8 +6,8 @@ import * as SplashScreen from "expo-splash-screen";
 import "react-native-reanimated";
 import { QueryClientProvider } from "react-query";
 
-import { useColorScheme } from "@/hooks/useColorScheme";
 import { queryClient } from "@/src/config/reactQuery";
+import { useColorScheme } from "@/src/hooks/useColorScheme.web";
 import {
   DarkTheme,
   DefaultTheme,
