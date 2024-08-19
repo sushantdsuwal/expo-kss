@@ -4,31 +4,28 @@ import { ListCurrencies } from "./components/ListCurrencies";
 
 import React, { useState } from "react";
 
-import { TextInput, View } from "react-native";
-
 import StackHeader from "@/src/components/common/StackHeader";
+import { ThemedView } from "@/src/components/common/ThemedView";
+import Input from "@/src/components/common/input";
 
 export const CurrencyConverterScreen: React.FC = () => {
   const [amount, setAmount] = useState(1);
 
   return (
-    <CurrencyConverterProvider>
-      <StackHeader title="Currency Converter" />
-      <View style={{ padding: 16 }}>
-        <CurrencyPicker />
-        <TextInput
-          placeholder="Enter amount"
-          keyboardType="numeric"
-          value={amount.toString()}
-          onChangeText={(text) => setAmount(Number(text))}
-          style={{
-            borderWidth: 1,
-            padding: 8,
-            marginVertical: 8,
-          }}
-        />
-        <ListCurrencies amount={amount} />
-      </View>
-    </CurrencyConverterProvider>
+    <ThemedView style={{ flex: 1 }}>
+      <CurrencyConverterProvider>
+        <StackHeader title="Currency Converter" />
+        <ThemedView style={{ padding: 16 }}>
+          <CurrencyPicker />
+          <Input
+            placeholder="Enter amount"
+            keyboardType="numeric"
+            value={amount.toString()}
+            onChangeText={(text) => setAmount(Number(text))}
+          />
+          <ListCurrencies amount={amount} />
+        </ThemedView>
+      </CurrencyConverterProvider>
+    </ThemedView>
   );
 };

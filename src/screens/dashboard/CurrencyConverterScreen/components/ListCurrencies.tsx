@@ -2,7 +2,10 @@ import { useCurrencyConverter } from "../hooks/useCurrencyConverter";
 
 import React from "react";
 
-import { ActivityIndicator, Text, View } from "react-native";
+import { ActivityIndicator } from "react-native";
+
+import { ThemedText } from "@/src/components/common/ThemedText";
+import { ThemedView } from "@/src/components/common/ThemedView";
 
 export const ListCurrencies: React.FC<{ amount: number }> = ({ amount }) => {
   const { convert, isLoading, error } = useCurrencyConverter();
@@ -12,12 +15,12 @@ export const ListCurrencies: React.FC<{ amount: number }> = ({ amount }) => {
   }
 
   if (error) {
-    return <Text>Error fetching conversion rate</Text>;
+    return <ThemedText>Error fetching conversion rate</ThemedText>;
   }
 
   return (
-    <View>
-      <Text>Converted Amount: {convert(amount).toFixed(2)}</Text>
-    </View>
+    <ThemedView>
+      <ThemedText>Converted Amount: {convert(amount).toFixed(2)}</ThemedText>
+    </ThemedView>
   );
 };
