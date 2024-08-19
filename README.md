@@ -1,50 +1,44 @@
-# Welcome to your Expo app 👋
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+src
+├── api
+│   ├── currency
+│   │   ├── currency.api.ts
+│   │   └── useCurrencyApi.ts
+├── screens
+│   └── dashboard
+│       └── CurrencyConverterScreen
+│           ├── Provider
+│           │   └── CurrencyConverterProvider.tsx
+│           ├── hooks
+│           │   └── useCurrencyConverter.ts
+│           └── components
+│               ├── CurrencyPicker.tsx
+│               └── ListCurrencies.tsx
 
-## Get started
 
-1. Install dependencies
 
-   ```bash
-   npm install
-   ```
+#Explanation and Key Points
+1. API Integration
+currency.api.ts: Handles the API call to fetch currency conversion rates.
+useCurrencyApi.ts: Utilizes react-query to fetch and cache the conversion rates for efficient data retrieval.
 
-2. Start the app
+2. Provider Context
+CurrencyConverterProvider.tsx: Manages the state for base and target currencies, making the state accessible throughout the module.
 
-   ```bash
-    npx expo start
-   ```
+3. Custom Hook
+useCurrencyConverter.ts: Combines API data with the context state to provide conversion logic. It also handles loading and error states, ensuring a smooth user experience.
 
-In the output, you'll find options to open the app in a
+Components
+1. CurrencyPicker.tsx
+A component that allows users to select currencies from a dropdown menu.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+2. ListCurrencies.tsx
+Displays the converted amount, dynamically updating based on changes in state and API data.
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+#Modularity and Scalability
 
-## Get a fresh project
+Modular Structure: Each file in this module has a single responsibility, making the code easy to understand and maintain.
 
-When you're ready, run:
+Scalability: The structure allows for easy expansion by adding more currencies, integrating additional API endpoints, or enhancing features related to currency conversion.
 
-```bash
-npm run reset-project
-```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
