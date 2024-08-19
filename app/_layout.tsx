@@ -6,7 +6,6 @@ import { useEffect } from 'react';
 import 'react-native-reanimated';
 
 import { useColorScheme } from '@/hooks/useColorScheme';
-import { View } from 'react-native';
 import { QueryClientProvider } from 'react-query';
 import { queryClient } from '@/src/config/reactQuery';
 
