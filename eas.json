@@ -18,7 +18,18 @@
         "EXPO_PUBLIC_EXCHANGE_RATE_API_KEY": "QowpGeAE4Tm8Vdh6yGaaBxevZYkUUJGC"
       }
     },
+    "production:apk": {
+      "autoIncrement": true,
+      "channel": "production",
+      "env": {
+        "EXPO_PUBLIC_EXCHANGE_RATE_API_KEY": "QowpGeAE4Tm8Vdh6yGaaBxevZYkUUJGC"
+      },
+      "android": {
+        "buildType": "apk"
+      }
+    },
     "production": {
+      "autoIncrement": true,
       "channel": "production",
       "env": {
         "EXPO_PUBLIC_EXCHANGE_RATE_API_KEY": "QowpGeAE4Tm8Vdh6yGaaBxevZYkUUJGC"

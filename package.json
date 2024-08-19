@@ -10,7 +10,8 @@
     "web": "expo start --web",
     "test": "jest --watchAll",
     "lint": "expo lint",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "eas:build:android:production:apk": "eas build --profile production:apk --platform android"
   },
   "jest": {
     "preset": "jest-expo"
