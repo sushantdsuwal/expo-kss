@@ -1,6 +1,7 @@
-import React from 'react';
-import { Stack } from 'expo-router';
-import { Text } from 'react-native';
+import React from "react";
+
+import { Stack } from "expo-router";
+import { Text } from "react-native";
 
 interface StackHeaderProps {
   title: string;

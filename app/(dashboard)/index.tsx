@@ -1,7 +1,7 @@
-import { Redirect } from 'expo-router';
+import React from "react";
 
-import React from 'react';
+import { Redirect } from "expo-router";
 
 export default function index() {
-  return <Redirect href='/(dashboard)/currency-converter' />;
+  return <Redirect href="/(dashboard)/currency-converter" />;
 }

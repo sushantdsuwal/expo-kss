@@ -1,6 +1,8 @@
-import React from 'react';
-import { View, Text, ActivityIndicator } from 'react-native';
-import { useCurrencyConverter } from '../hooks/useCurrencyConverter';
+import { useCurrencyConverter } from "../hooks/useCurrencyConverter";
+
+import React from "react";
+
+import { ActivityIndicator, Text, View } from "react-native";
 
 export const ListCurrencies: React.FC<{ amount: number }> = ({ amount }) => {
   const { convert, isLoading, error } = useCurrencyConverter();
