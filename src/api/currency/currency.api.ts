@@ -8,7 +8,7 @@ export const fetchConversionRate = async (
 ) => {
   const response = await axios.get(API_URL, {
     headers: {
-      apikey: process.env.EXCHANGE_RATE_API_KEY,
+      apikey: process.env.EXPO_PUBLIC_EXCHANGE_RATE_API_KEY,
     },
     params: {
       base: baseCurrency,
