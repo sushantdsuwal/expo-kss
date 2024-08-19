@@ -21,7 +21,8 @@
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.sushantdsuwal.CurrencyConveter"
+      "package": "com.sushantdsuwal.CurrencyConveter",
+      "versionCode": 2
     },
     "web": {
       "bundler": "metro",
